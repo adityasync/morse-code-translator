@@ -67,9 +67,22 @@ public class MorseCodeTranslatorGUI extends JFrame implements KeyListener {
         JScrollPane morseCodeScroll = new JScrollPane(morseCodeArea);
         morseCodeScroll.setBounds(20, 430, 484, 236);
 
+        // copy button
+        JButton copyButton = new JButton("Copy");
+        copyButton.setBounds(140, 680, 100, 30);
+        copyButton.addActionListener(e -> {
+            if (!morseCodeArea.getText().isEmpty()) {
+                morseCodeArea.selectAll();
+                morseCodeArea.copy();
+                morseCodeArea.select(0, 0);
+                JOptionPane.showMessageDialog(this, "Morse code copied to clipboard!",
+                        "Success", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+
         // play sound button
         JButton playSoundButton = new JButton("Play Sound");
-        playSoundButton.setBounds(210, 680, 100, 30);
+        playSoundButton.setBounds(300, 680, 100, 30);
         playSoundButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -101,6 +114,7 @@ public class MorseCodeTranslatorGUI extends JFrame implements KeyListener {
         add(textInputScroll);
         add(morseCodeInputLabel);
         add(morseCodeScroll);
+        add(copyButton);
         add(playSoundButton);
 
     }
