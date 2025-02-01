@@ -26,15 +26,16 @@ The **Morse Code Translator GUI** is a Java-based desktop application that allow
    ```
 2. Compile the Java files:
    ```sh
-   javac MorseCodeTranslatorGUI.java MorseCodeController.java
+   javac App.java MorseCodeTranslatorGUI.java MorseCodeController.java
    ```
 3. Run the application:
    ```sh
-   java MorseCodeTranslatorGUI
+   java App
    ```
 
 ## File Structure
 ```
+├── App.java                     # Entry point of the application
 ├── MorseCodeTranslatorGUI.java  # Main GUI application
 ├── MorseCodeController.java     # Handles Morse code translation and sound playback
 ├── README.md                    # Documentation
@@ -47,7 +48,8 @@ The **Morse Code Translator GUI** is a Java-based desktop application that allow
 4. **Play Sound:** Users can play the Morse code as sound using the `Play Sound` button.
 
 ## Screenshots
-(Add screenshots of the application here if available)
+![Main Interface](app.png)
+
 
 ## Future Enhancements
 - Support for Morse code to text translation.
@@ -58,5 +60,5 @@ The **Morse Code Translator GUI** is a Java-based desktop application that allow
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Author
-aDITYA
+Your Name (Replace with your name)
 
